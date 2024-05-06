@@ -17,6 +17,10 @@ def handle_form():
     # Validate ID number (assuming it's numeric)
     if len (id_numberle) != 10:
         return "身分證號碼長度錯誤!", 400
+    if char[0].isalpha():
+        print("第一個字元是英文字母。")
+    else:
+        print("第一個字元不是英文字母。")
 
     # Validate name (assuming it's alphabetic)
     if not re.match(r'^[A-Za-z\s]+$', name):
