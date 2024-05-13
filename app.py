@@ -21,8 +21,20 @@ def handle_form():
         print("第一個字元是英文字母。")
     else:
         print("第一個字元不是英文字母。")
-
     # Validate name (assuming it's alphabetic)
+def check_last_nine_digits(string):
+    if string[-9:].isdigit():
+        return True
+    else:
+        return False
+
+# 範例測試
+string = "這是一個範例123456789"
+if check_last_nine_digits(string):
+    print("最後九個字元是數字。")
+else:
+    print("最後九個字元不是數字。")
+
     if not re.match(r'^[A-Za-z\s]+$', name):
         return "Invalid name", 400
 
